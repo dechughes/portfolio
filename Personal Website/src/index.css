@@ -1,0 +1,231 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap');
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------
+   Design tokens
+---------------------------------- */
+
+:root {
+  --ink: #111111;
+  --muted: #6b6b6b;
+  --subtle: #9a9a9a;
+  --paper: #fafafa;
+  --accent: #a1071f;
+    --text-primary: #111111;
+  --text-secondary: #4b5563;
+  --bg: #fafafa;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.55;
+}
+
+
+
+/* ----------------------------------
+   Base
+---------------------------------- */
+
+html {
+  background: var(--paper);
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ----------------------------------
+   Typography
+---------------------------------- */
+
+.heading-xl {
+  font-family: 'Playfair Display', serif;
+  @apply text-5xl leading-tight;
+}
+
+.heading-lg {
+  font-family: 'Playfair Display', serif;
+  @apply text-3xl;
+}
+
+.heading-md {
+  @apply text-xl font-medium;
+}
+
+.body-lg {
+  @apply text-lg;
+}
+
+.body {
+  @apply text-base;
+}
+
+.meta {
+  @apply text-sm text-[var(--muted)];
+}
+
+/* ----------------------------------
+   Layout
+---------------------------------- */
+
+.page {
+  @apply min-h-screen;
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-8;
+}
+
+.section {
+  @apply py-24;
+}
+
+.section-tight {
+  @apply py-16;
+}
+
+/* ----------------------------------
+   Navigation
+---------------------------------- */
+
+.nav-link {
+  @apply text-base text-[var(--muted)] hover:text-[var(--ink)] transition-colors;
+}
+
+.nav-link-active {
+  @apply text-[var(--ink)];
+}
+
+/* ----------------------------------
+   Content
+---------------------------------- */
+
+.prose {
+  @apply max-w-2xl space-y-6;
+    font-family: 'Source Serif 4', serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.prose p {
+  @apply text-base text-[var(--ink)];
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ----------------------------------
+   Utilities
+---------------------------------- */
+
+.divider {
+  @apply w-full h-px bg-gray-200 my-12;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.accent-hover {
+  transition: color 0.2s ease;
+}
+
+.accent-hover:hover {
+  color: var(--accent);
+}
+.markdown-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.markdown-content h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+.markdown-content ul, .markdown-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #005b4c;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #6b7280;
+  margin: 1.5rem 0;
+}
+
+.markdown-content img {
+  width: 100%;
+  border-radius: 0.125rem;
+  margin: 1.5rem 0;
+}
+
+.markdown-content code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.875rem;
+}
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.875rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.markdown-content th {
+  text-align: left;
+  padding: 0.75rem 1.25rem;
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.markdown-content td {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.markdown-content tr:hover td {
+  background-color: #fafafa;
+}
+
+.markdown-content tr:last-child td {
+  border-bottom: none;
+}

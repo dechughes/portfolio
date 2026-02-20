@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  background: #eee;
+  overflow: hidden;
+  font-family: 'Playfair Display', 'Helvetica Neue', Arial, serif;
+  color: #202023;
+}
+
+
+a {
+  color: #8B323E;
+}
+
+#section-1 {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#artist-hub-root {
+  height: 100%;
+  padding-top: 3rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soulquarians Crate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="scene" id="scene">
+  
+  <!-- Click Overlay (appears when record is pulled out) -->
+  <div class="click-overlay"></div>
+  
+  <!-- Album Detail Panel (Left) -->
+  <div class="detail-panel detail-left" id="detailLeft">
+    <div class="detail-content">
+      <h2 class="album-title"></h2>
+      <p class="album-artist"></p>
+      <p class="album-year"></p>
+      <div class="album-description"></div>
+    </div>
+  </div>
+
+  <!-- Crate Container -->
+  <div class="crate-container">
+    <div class="crate-layer">
+      <div class="crate-back"></div>
+
+      <!-- Records Container -->
+      <div class="records">
+        <div class="record" data-album="voodoo">
+          <div class="sleeve" style="background-image: url('covers/voodoo.jpeg')"></div>
+          <span class="spine">Voodoo • D'Angelo</span>
+        </div>
+
+        <div class="record" data-album="mamas-gun">
+          <div class="sleeve" style="background-image: url('covers/mamasgun.jpg')"></div>
+          <span class="spine">Mama's Gun • Erykah Badu</span>
+        </div>
+
+        <div class="record" data-album="things-fall-apart">
+          <div class="sleeve" style="background-image: url('covers/allthingsfallapart.jpg')"></div>
+          <span class="spine">Things Fall Apart • The Roots</span>
+        </div>
+
+        <div class="record" data-album="black-on-both-sides">
+          <div class="sleeve" style="background-image: url('covers/blackonbothsides.jpg')"></div>
+          <span class="spine">Black on Both Sides • Mos Def</span>
+        </div>
+
+        <div class="record" data-album="like-water">
+          <div class="sleeve" style="background-image: url('covers/likewaterforchocolate.jpg')"></div>
+          <span class="spine">Like Water for Chocolate • Common</span>
+        </div>
+
+      </div>
+
+    </div>  
+    <!-- Full Crate Front -->
+    <div class="crate-front"></div>
+    
+    <!-- Interaction Hint -->
+    <div class="interaction-hint">Click the records to begin</div>
+  </div>
+
+  <!-- Album Detail Panel (Right) -->
+  <div class="detail-panel detail-right" id="detailRight">
+    <div class="detail-content">
+      <h3>Key Tracks</h3>
+      <ul class="track-list"></ul>
+      <div class="album-credits"></div>
+      <button class="play-btn" id="playBtn">
+        <span class="play-icon">▶</span>
+        <span class="play-text">Play Top Track</span>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Hero Album Display - Clean copy that appears when pulled out -->
+  <div class="hero-album" id="heroAlbum">
+    <img class="hero-album-cover" id="heroAlbumCover" src="" alt="Album Cover" />
+    <div class="vinyl-indicator-hero"></div>
+  </div>
+
+<!-- Info Button (Clickable) -->
+<button class="info-button" id="infoButton">ℹ</button>
+
+<!-- Info Panel (Slides in from right) -->
+<div class="info-panel" id="infoPanel">
+  <button class="info-close" id="infoClose">×</button>
+  <div class="info-content">
+<h2>About this crate</h2>
+
+<p>
+  This interactive crate is a personal project based on the Soulquarians - an informal name given to a loose collective of musicians that formed around Questlove, D’Angelo, James Poyser and J Dilla. Often described as a melting pot for musical experimentation, the artists working under this banner helped define the neo-soul movement and shaped the sound of soul, jazz and hip-hop in the late ’90s and early 2000s.
+</p>
+
+<p>
+  I wanted to recreate some of the playful, exploratory feel of early internet design - sites like the original Space Jam website for the 1996 film (which also featured a great D’Angelo track on the soundtrack). They weren’t especially polished or commercial, but they felt like places where the creators wanted to offer something extra, rather than simply push content.
+</p>
+
+<p>
+  I’ve always liked the idea of flicking through records, even though it was slightly before my time. There’s something appealing about picking up a record or a book you know nothing about, where the cover, the setting and a bit of curiosity do most of the work - rather than lists, rankings or recommendations.
+</p>
+
+<p>
+  This is version one of the project. It’s mainly an experiment in UI and interaction, with a bit of storytelling mixed in. The aim was to make something that feels closer to a proper record shop visit, rather than just clicking through content. Credit to AI for help with parts of the code, and to the sources below for visual and musical reference.
+</p>
+
+<a href="YOUR_BLOG_URL_HERE" target="_blank" class="info-link">
+  Read the full build process on my blog →
+</a>
+<h3>Sources & Visual References</h3>
+
+<p class="info-sources-note">
+  This project is non-commercial and created for personal and educational purposes.  
+  Visual references, fonts and audio are credited below where applicable.
+</p>
+
+    <ul class="info-sources">
+      <li> Electric Lady Studios typeface - sourced from <a href="https://electricladystudios.com" target="_blank">Electric Lady Studios</a> </li>
+      <li> Soulquarians typeface - sourced via <a href="https://uk.pinterest.com/pin/406098091419806136/" target="_blank">Pinterest</a> (used as visual inspiration only)</li>
+      <li> Poster reference - sourced via <a href="https://uk.pinterest.com/pin/406098091419806280" target="_blank">Pinterest - from Foiegraphics (@foiegraphics on Instagram)</a> (used as visual inspiration only)</li>
+      <li> Crate imagery - AI-generated using Microsoft Copilot </li>
+      <li> Background imagery - AI-generated using Microsoft Copilot</li>
+      <li>
+  <strong>Common – Like Water for Chocolate</strong>  
+  (2000), released by MCA Records. Album © Common / MCA Records.  
+  Artwork and audio snippets used for educational and non-commercial demonstration purposes.
+</li>
+
+<li>
+  <strong>Erykah Badu – Mama’s Gun</strong>  
+  (2000), released by Motown Records / Universal. Album © Erykah Badu / Motown Records.  
+  Artwork and audio snippets used for educational and non-commercial demonstration purposes. 
+</li>
+
+<li>
+  <strong>D’Angelo – Voodoo</strong>  
+  (2000), released by Virgin Records / Cheeba Sound. Album © D’Angelo / Virgin Records.  
+  Artwork and audio snippets used for educational and non-commercial demonstration purposes.
+</li>
+
+<li>
+  <strong>The Roots – Things Fall Apart</strong>  
+  (1999), released by MCA Records. Album © The Roots / MCA Records.  
+  Artwork and audio snippets used for educational and non-commercial demonstration purposes.
+</li>
+
+<li>
+  <strong>Mos Def – Black on Both Sides</strong>  
+  (1999), released by Rawkus Records (original). Album © Mos Def / Rawkus Records.  
+  Artwork and audio snippets used for educational and non-commercial demonstration purposes.
+</li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+
+  <!-- Audio Player (Hidden) -->
+  <audio id="audioPlayer"></audio>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
