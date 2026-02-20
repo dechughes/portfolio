@@ -1,16 +1,10 @@
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "*.jsx"
-  [headers.values]
-    Content-Type = "application/javascript"
-    [build]
+[build]
   base = "Personal Website"
-  command = "npm run build"
+  command = "npm install && npm run build"
   publish = "dist"
+
+[build.environment]
+  CI = "false"
 
 [[headers]]
   for = "*.js"
