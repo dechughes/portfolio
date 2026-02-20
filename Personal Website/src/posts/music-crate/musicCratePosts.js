@@ -1,4 +1,4 @@
-import musicCratePost1 from './musicCrate.md?raw'
+import musicCratePost1 from './musiccrate.md?raw'
 
 export const musicCratePosts = [
   {
