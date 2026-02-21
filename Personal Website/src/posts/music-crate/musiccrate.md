@@ -1,3 +1,6 @@
+
+## 1. The idea
+
 Streaming is convenient, but it flattens how we discover music. Everything lives in the same list, at the same size, with the same weight.This project was an attmept to see if I could recreate the record shop experience in a browser interface - make it feel a bit more physical and human. I centred it around albums from the Soulquarians: a loosely defined movement, short-lived and not especially commercial, but with some great output
 
 ---
