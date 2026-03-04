@@ -12,7 +12,7 @@ The commercial implication is that interventions targeting conversion speed such
 
 ---
 
-## **2. Month 0 and Month 1 post-conversion are the highest-risk window — and the highest-leverage intervention point**
+## **2. Month 0 and Month 1 post-conversion are the highest-risk window and the highest-leverage intervention point**
 
 The cohort analysis is unambiguous on this: churn is heavily front-loaded. The biggest subscriber losses happen in the first one to two billing months after conversion. Users who survive beyond Month 2 become significantly more stable, with retention holding in the 74–80% range from Month 3 onward - well above the fintech benchmarks used to build the model.
 
@@ -20,7 +20,7 @@ This means that onboarding quality in the first 30–60 days post-conversion is 
 
 ---
 
-## **3. The active subscriber base is eroding — the business needs to either grow faster or churn less**
+## **3. The active subscriber base is eroding and the business needs to either grow faster or churn less**
 
 The revenue decline identified in Page 5 is not a sign of poor acquisition or weak monetisation quality. ARPU is consistent across every cohort at every stage of the lifecycle. The problem is purely volumetric: the active subscriber base fell from roughly 2,043 in January to 652 in December as early cohorts churned out faster than late-year conversions could replace them.
 
@@ -28,7 +28,7 @@ In a real business context this would be a critical signal. A declining active b
 
 ---
 
-## **4. On the A/B test — run a different experiment**
+## **4. On the A/B test**
 
 Variant A and Variant B produced effectively identical results across every metric. This is not a failure of the experiment - it is the correct finding when two variants are too similar to produce measurable behavioural differences. The recommendation is not to roll out either variant but to design a more structurally different test: a meaningfully different onboarding flow, a different conversion trigger, or a pricing structure change. Marginal UI variations will not move the needle on a conversion or retention problem of this nature.
 
