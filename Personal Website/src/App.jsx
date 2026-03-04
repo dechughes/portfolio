@@ -7,6 +7,10 @@ import ReactMarkdown from 'react-markdown'
 // import { travelKitPosts } from './posts/travel-kit/travelKitPosts'
 import { musicCratePosts } from './posts/music-crate/musicCratePosts'
 import { ecommerceAnalysisPosts } from './posts/ecommerceAnalysisPosts/sqlprojectposts'
+import { fintechdashboardPosts } from './posts/fintechdashboardPosts/fintechprojectposts'
+
+
+
 
 import everestImage from './assets/everest.jpg'
 import komodoImage from './assets/komodo.jpg'
@@ -40,6 +44,11 @@ const sqlImages = [
   '/assets/sqlpost1/orderfrequencydistribution.png',
   '/assets/sqlpost1/sellerorderdistribution.png',
   '/assets/sqlpost1/uniteconomicsperorder.png',
+]
+
+// Fintech Dashboard Images
+const fintechImages = [
+  'assets/fintechpost/fintechhero.png',
 ]
 
 // This is the expandable component used in the About section
@@ -108,6 +117,7 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null)
   const [selectedPost, setSelectedPost] = useState(null)
   const [musicCrateImageIndex, setMusicCrateImageIndex] = useState(0)
+  const [fintechImageIndex, setFintechImageIndex] = useState(0)
 const [sqlImageIndex, setSqlImageIndex] = useState(0)
   
 
@@ -159,6 +169,18 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [selectedProject])
 
+useEffect(() => {
+  if (selectedProject !== 'fintech-dashboard') return
+
+  setFintechImageIndex(0)
+
+  const interval = setInterval(() => {
+    setFintechImageIndex(i => (i + 1) % fintechImages.length)
+  }, 5000)
+
+  return () => clearInterval(interval)
+}, [selectedProject])
+
 
   const navItem = (key, label) => (
     <button
@@ -199,7 +221,7 @@ useEffect(() => {
       </div>
       
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 text-[11px] sm:text-xs text-gray-400">
-      Last updated · June 2025
+      Last updated · March 2026
       </div>
 
 
@@ -337,6 +359,26 @@ useEffect(() => {
     </p>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+
+<button
+  onClick={() => setSelectedProject('fintech-dashboard')}
+  className="group text-left border border-gray-200 hover:border-[#005b4c] transition-all p-6 rounded-sm"
+>
+  <div className="aspect-[4/3] bg-gray-100 mb-4 rounded-sm overflow-hidden flex items-center justify-center">
+    <span className="text-gray-400 text-sm">Fintech</span> {/* Placeholder text for the image */}
+  </div>
+  <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-2">
+    Fintech Platform Dashboard
+  </h3>
+  <p className="text-sm text-gray-600">
+    Power BI dashboard analysing a fintech platform's growth, funnel, and retention
+  </p>
+  <p className="text-xs text-gray-400 mt-3">
+    2026 · Complete
+  </p>
+</button>
+
+
 
     <button
   onClick={() => setSelectedProject('sql-analysis')}
@@ -542,6 +584,78 @@ useEffect(() => {
   </motion.section>
 )}
 
+{/* Fintech Dashboard Project Overview */}
+{view === 'projects' && selectedProject === 'fintech-dashboard' && !selectedPost && (
+  <motion.section
+    key="fintech-dashboard-overview"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
+    <button
+      onClick={() => setSelectedProject(null)}
+      className="text-sm text-gray-500 hover:text-[#005b4c] transition mb-8 flex items-center gap-2"
+    >
+      <span>←</span>
+      <span>Back to projects</span>
+    </button>
+
+    <h1 className="text-3xl sm:text-4xl font-medium mb-4">
+      Fintech Platform Dashboard
+    </h1>
+
+    <p className="text-lg text-gray-600 max-w-2xl mb-2">
+      A Power BI dashboard built to analyse a fintech platform's commercial performance — covering executive overview, funnel analysis, experiment results, and cohort retention.
+    </p>
+
+    {/* Image carousel */}
+    <div className="mb-14 max-w-3xl">
+      <div className="relative aspect-[16/10] sm:aspect-[3/2] rounded-sm overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={fintechImageIndex}
+            src={fintechImages[fintechImageIndex]}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0 w-full h-full object-contain"
+            alt="Fintech dashboard"
+          />
+        </AnimatePresence>
+      </div>
+      <p className="mt-3 text-xs text-gray-500">
+        Screenshots from the Power BI dashboard.
+      </p>
+    </div>
+
+    <div className="space-y-8 max-w-2xl">
+      {fintechdashboardPosts.map((post) => (
+        <article key={post.id} className="border-b border-gray-100 pb-8">
+          <p className="text-xs text-gray-400 mb-3">{post.date}</p>
+          <button
+            onClick={() => setSelectedPost(post.id)}
+            className="text-left group w-full"
+          >
+            <h2 className="text-xl font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-3">
+              {post.title}
+            </h2>
+            {post.snippet ? (
+              <p className="text-gray-600 leading-relaxed">
+                {post.snippet}
+                <span className="text-[#005b4c] ml-2 group-hover:ml-3 transition-all">
+                  Read more →
+                </span>
+              </p>
+            ) : (
+              <p className="text-gray-500 italic">Notes in progress…</p>
+            )}
+          </button>
+        </article>
+      ))}
+    </div>
+  </motion.section>
+)}
 
 {/* Individual Music Crate Post */}
 {view === 'projects' && selectedProject === 'music-crate' && selectedPost && (
@@ -719,6 +833,102 @@ useEffect(() => {
               <div />
             )}
 
+            {nextPost && (
+              <button
+                onClick={() => setSelectedPost(nextPost.id)}
+                className="text-sm text-gray-600 hover:text-[#005b4c] transition flex items-center gap-2"
+              >
+                <div className="text-right">
+                  <div className="text-xs text-gray-400">Next</div>
+                  <div>{nextPost.title}</div>
+                </div>
+                <span>→</span>
+              </button>
+            )}
+          </div>
+
+          <button
+            onClick={() => setSelectedPost(null)}
+            className="mt-8 text-sm text-gray-500 hover:text-[#005b4c] transition"
+          >
+            ← Back to all posts
+          </button>
+        </>
+      )
+    })()}
+  </motion.section>
+)}
+
+{/* Individual Fintech Dashboard Post */}
+{view === 'projects' && selectedProject === 'fintech-dashboard' && selectedPost && (
+  <motion.section
+    key="fintech-dashboard-post"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
+    {(() => {
+      const post = fintechdashboardPosts.find(p => p.id === selectedPost)
+      const postIndex = fintechdashboardPosts.findIndex(p => p.id === selectedPost)
+      const prevPost = postIndex > 0 ? fintechdashboardPosts[postIndex - 1] : null
+      const nextPost = postIndex < fintechdashboardPosts.length - 1 ? fintechdashboardPosts[postIndex + 1] : null
+
+      return (
+        <>
+          <div className="text-sm text-gray-500 mb-8 flex items-center gap-2">
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="hover:text-[#005b4c] transition"
+            >
+              Projects
+            </button>
+            <span>→</span>
+            <button
+              onClick={() => setSelectedPost(null)}
+              className="hover:text-[#005b4c] transition"
+            >
+              Fintech Platform Dashboard
+            </button>
+            <span>→</span>
+            <span className="text-gray-900">{post.title}</span>
+          </div>
+
+          <p className="text-xs text-gray-400 mb-3">{post.date}</p>
+          <h1 className="text-3xl sm:text-4xl font-medium mb-12">
+            {post.title}
+          </h1>
+
+          <div className="max-w-2xl">
+            <div className="text-gray-700 space-y-6 leading-relaxed text-base markdown-content">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  img: ({ node, ...props }) => (
+                    <img {...props} className="w-full rounded-sm my-6" />
+                  )
+                }}
+              >
+                {post.markdown}
+              </ReactMarkdown>
+            </div>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-gray-200 flex justify-between items-center max-w-2xl">
+            {prevPost ? (
+              <button
+                onClick={() => setSelectedPost(prevPost.id)}
+                className="text-sm text-gray-600 hover:text-[#005b4c] transition flex items-center gap-2"
+              >
+                <span>←</span>
+                <div className="text-left">
+                  <div className="text-xs text-gray-400">Previous</div>
+                  <div>{prevPost.title}</div>
+                </div>
+              </button>
+            ) : (
+              <div />
+            )}
             {nextPost && (
               <button
                 onClick={() => setSelectedPost(nextPost.id)}
