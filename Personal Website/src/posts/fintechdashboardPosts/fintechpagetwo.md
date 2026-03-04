@@ -1,5 +1,3 @@
-# **Page 2 - Problem Definition and Assumptions**
-
 Using Cleo's 2024 annual report and data from their website (last updated December 2025), I consolidated the following information to build a foundation for the model. 
 
 ---

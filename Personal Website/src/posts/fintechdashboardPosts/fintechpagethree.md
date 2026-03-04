@@ -1,5 +1,3 @@
-# **Page 3 — Dataset**
-
 Following the creation of the model parameters based on Cleo’s real‑world metrics, the next step was to generate synthetic user‑level data. To simulate realistic behaviour, four interconnected tables were created using a Python script (generated with Anthropics Claude). These tables form the foundation for downstream analysis and dashboarding.
 
 The four datasets are:
@@ -133,9 +131,9 @@ This table documents the model assumptions so the dataset can be understood, aud
 
 After running the Python script in VSCode, the four tables were generated as `.csv` files and imported into Power BI.
 
-The **Users** table was linked via `user_id` to both the **Transactions** and **Events** tables.
+The Users table was linked via `user_id` to both the Transactions and Events tables.
 
-A **Date** table was then created to serve as a continuous calendar for 2024. This is required because the Users, Events, and Transactions tables only contain dates where activity occurred. The Date table was linked via:
+A Date table was then created to serve as a continuous calendar for 2024. This is required because the Users, Events, and Transactions tables only contain dates where activity occurred. The Date table was linked via:
 
 - Date → users.signup_date  
 - Date → events.event_date  

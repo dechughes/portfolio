@@ -1,5 +1,3 @@
-# **Page 6 — Funnel Analysis: Identifying Where Value Is Being Lost**
-
 This section evaluates the user funnel from acquisition through activation and conversion to identify where value is lost and which stages most constrain revenue growth. The goal is to understand channel quality, behavioural drop‑offs, and commercial bottlenecks.
 
 ---
@@ -18,7 +16,7 @@ This section evaluates the user funnel from acquisition through activation and c
 
 ## **Funnel Dashboard**
 
-[IMAGE OF FUNNEL DASHBOARD]
+[IMAGE OF FUNNEL DASHBOARD - to be uploaded]
 
 ---
 

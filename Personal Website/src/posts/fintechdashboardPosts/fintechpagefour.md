@@ -1,5 +1,3 @@
-# **Page 4 — Measure Creation**
-
 With the dataset created, imported, and linked in Power BI, the next step is to build measures that calculate and display the key commercial metrics. These measures allow the business to understand performance, diagnose friction points, and analyse user behaviour across the lifecycle.
 
 To structure this effectively, four dashboards were created, each reflecting a core analytical need in a real business environment.
@@ -57,4 +55,3 @@ This dashboard focuses on retention behaviour over time, answering questions suc
 
 This enables long‑term behavioural analysis and helps identify structural retention issues.
 
----

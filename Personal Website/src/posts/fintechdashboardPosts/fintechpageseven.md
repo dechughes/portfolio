@@ -1,5 +1,3 @@
-# **Page 7 — Experiment Analysis: A vs B**
-
 This section evaluates whether Variant A or Variant B delivers better performance across activation, conversion, revenue, and retention. The goal is to determine whether either variant should be rolled out, whether further testing is needed, or whether no change is justified.
 
 ---
@@ -18,7 +16,7 @@ This section evaluates whether Variant A or Variant B delivers better performanc
 
 ## **Experiment Analysis (A/B Testing) Dashboard**
 
-[Experiment Analysis dashboard image]
+[Experiment Analysis dashboard image - to be uploaded]
 
 ---
 

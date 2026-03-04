@@ -1,5 +1,3 @@
-# **Page 5 - Executive Overview**
-
 This section provides a high‑level view of the business’s health, focusing on growth trajectory, monetisation performance, and retention dynamics across the user base.
 
 ---
@@ -16,7 +14,7 @@ This section provides a high‑level view of the business’s health, focusing o
 
 ## **Executive Overview Dashboard**
 
-*(Dashboard visual referenced in the original document.)*
+*(Dashboard visual to upload.)*
 
 ---
 
@@ -38,7 +36,7 @@ The funnel metrics are strong:
 - **59.9%** of sign‑ups activate  
 - **41.5%** of activated users convert to paid  
 
-This is far above the fintech industry norm of **5–14%** for moving from sign‑up to a key monetisation action.
+This is far above the fintech industry norm of 5–14% for moving from sign‑up to a key monetisation action.
 
 Revenue is also well‑distributed across acquisition channels:
 
@@ -49,10 +47,10 @@ Revenue is also well‑distributed across acquisition channels:
 
 Each channel contributes proportionally to its user volume, indicating no channel is disproportionately over‑ or under‑performing. The acquisition engine is healthy and diversified.
 
-However, only **24.83%** of all sign‑ups ever generate revenue. The largest points of attrition are:
+However, only 24.83% of all sign‑ups ever generate revenue. The largest points of attrition are:
 
-- **40%** of sign‑ups never activate  
-- **58.5%** of activated users never convert  
+- 40% of sign‑ups never activate  
+- 58.5% of activated users never convert  
 
 This is expected in a freemium model, but it means the business is heavily reliant on the quality of its conversion mechanics and ARPU to sustain growth - there is limited room to absorb further user drop-off.
 
@@ -62,7 +60,7 @@ This is expected in a freemium model, but it means the business is heavily relia
 
 The churn story is more complex due to limitations in the dataset.
 
-Monthly churn appears to fall dramatically over the year-from **26% in January** to **5% in December**. This looks like improving retention, but it is not.
+Monthly churn appears to fall dramatically over the year-from 26% in January to 5% in December. This looks like improving retention, but it is not.
 
 - January’s active subscriber base is dominated by early converts who have already self‑selected; low‑intent users churned earlier, leaving only committed subscribers.  
 - December’s active base includes both long‑surviving early users and very recent converts who have not yet had time to churn.  
