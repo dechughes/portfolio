@@ -605,7 +605,7 @@ useEffect(() => {
     </h1>
 
     <p className="text-lg text-gray-600 max-w-2xl mb-2">
-      A Power BI dashboard built to analyse a fintech platform's commercial performance — covering executive overview, funnel analysis, experiment results, and cohort retention.
+      A project to design and generate a realistic fintech dataset and use it to analyse growth, funnel performance, and user retention, with the aim of identifying insights that could inform product and growth decisions while demonstrating professional Power BI dashboard development.
     </p>
 
     {/* Image carousel */}
