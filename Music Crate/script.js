@@ -683,6 +683,84 @@ function hideHint() {
   }
 }
 
+// ===== MOBILE TOUCH SUPPORT =====
+let touchStartY = 0;
+let touchEndY = 0;
+let isTouchDevice = false;
+
+// Detect touch device
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  isTouchDevice = true;
+  console.log('Touch device detected');
+}
+
+// Touch handlers for crate swipe
+crateContainer.addEventListener('touchstart', (e) => {
+  if (!crateActivated || pulledOutRecord || isTransitioning) return;
+  
+  touchStartY = e.touches[0].clientY;
+  e.stopPropagation();
+}, { passive: true });
+
+crateContainer.addEventListener('touchend', (e) => {
+  if (!crateActivated || pulledOutRecord || isTransitioning) return;
+  
+  touchEndY = e.changedTouches[0].clientY;
+  handleSwipe();
+  e.stopPropagation();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDistance = touchStartY - touchEndY;
+  const minSwipeDistance = 30; // Minimum pixels to register as swipe
+  
+  if (Math.abs(swipeDistance) < minSwipeDistance) return;
+  
+  if (swipeDistance > 0) {
+    // Swiped up - next record
+    selectRecord(Math.min(selectedIndex + 1, records.length - 1));
+    updateHint('Tap crate to open');
+  } else {
+    // Swiped down - previous record
+    selectRecord(Math.max(selectedIndex - 1, 0));
+    updateHint('Tap crate to open');
+  }
+  
+  // Auto-hide hint after 2s
+  setTimeout(() => {
+    if (!pulledOutRecord) hideHint();
+  }, 2000);
+}
+
+// Update hints for mobile
+if (isTouchDevice) {
+  // Override desktop hints with mobile-friendly versions
+  const originalActivateCrate = activateCrate;
+  activateCrate = function() {
+    crateActivated = true;
+    crateContainer.classList.remove('inactive');
+    crateContainer.classList.add('active');
+    
+    selectRecord(2);
+    
+    updateHint('Swipe up/down to browse • Tap to open');
+    
+    setTimeout(() => {
+      hideHint();
+    }, 5000);
+  };
+}
+
+// Prevent pull-to-refresh interfering with swipes
+document.body.addEventListener('touchmove', (e) => {
+  if (crateActivated && !pulledOutRecord) {
+    // Allow scrolling info panel but prevent elsewhere
+    if (!e.target.closest('.info-panel')) {
+      e.preventDefault();
+    }
+  }
+}, { passive: false });
+
 // ===== INITIAL SETUP =====
 crateContainer.classList.add('inactive');
 
@@ -690,5 +768,6 @@ console.log('Script loaded. Elements:', {
   scene,
   clickOverlay,
   crateContainer,
-  records: records.length
+  records: records.length,
+  touchDevice: isTouchDevice
 });
