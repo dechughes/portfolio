@@ -1,5 +1,4 @@
 [build]
-  base = "Personal Website"
   command = "npm install && npx vite build"
   publish = "dist"
 
