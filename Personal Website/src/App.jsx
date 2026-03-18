@@ -452,6 +452,10 @@ useEffect(() => {
     <p className="text-lg text-gray-600 max-w-2xl mb-2">
       An experiment in making the process of finding a record on the internet more human - built around the albums from the Soulquarians.
     </p>
+    <p className="text-lg text-gray-600 max-w-2xl mb-2">
+    Link to project: <a href="https://musiccrate.netlify.app/" className="text-[#005b4c] hover:underline">https://musiccrate.netlify.app/</a>
+    </p>  
+
 {/* Image carousel */}
 <div className="mb-14 max-w-3xl">
   <div className="relative aspect-[16/10] sm:aspect-[3/2] rounded-sm overflow-hidden">
@@ -468,6 +472,10 @@ useEffect(() => {
       />
     </AnimatePresence>
   </div>
+
+  <p className="mt-3 text-xs text-gray-500">
+    Note: This version is designed for a 1920 × 1080 desktop view, where the perspective and depth work best. Mobile and responsive layouts are still on the “future iteration” list.
+  </p>
 
   <p className="mt-3 text-xs text-gray-500">
     Ongoing documentation of the Music Crate project.
@@ -503,9 +511,6 @@ useEffect(() => {
       ))}
     </div>
 
-    <p className="text-sm text-gray-500 mt-12 max-w-xl">
-      Writing as a way of thinking. Posts evolve as the project evolves.
-    </p>
   </motion.section>
 )}
 

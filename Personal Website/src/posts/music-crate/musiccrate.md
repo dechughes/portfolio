@@ -1,13 +1,18 @@
 
 ## 1. The idea
 
-Streaming is convenient, but it flattens how we discover music. Everything lives in the same list, at the same size, with the same weight.This project was an attmept to see if I could recreate the record shop experience in a browser interface - make it feel a bit more physical and human. I centred it around albums from the Soulquarians: a loosely defined movement, short-lived and not especially commercial, but with some great output
+Streaming is great for convenience, but it flattens the experience of finding music. Everything lives in the same list, at the same size, with the same weight. This project was an attempt to see if I could recreate the record shop experience in a browser interface and make it feel a bit more physical and human. I centred it around albums from the Soulquarians: a loosely defined group, short-lived but with some great output.
+
+**Link to project**: https://musiccrate.netlify.app/
+
+While creating this project I learned that the approach I was taking actually has a name: Skeuomorphism[^1]. In future projects, I'd like to continue to explore how interface design could change the way people discover and engage with music, making the experience less about passive consumption and more about the act of engaging with it.
+
 
 ---
 
 ## 2. Inspiration & References
 
-My main references were record shops and cafés I’ve visited in real life. I’ve always found it interesting how they use fairly low-fi materials to deliver a high-end experience – worn wood, stickers, hand-written signs – and still feel considered.
+A lot of the inspiration came from real record shops and cafés I’ve spent time in. I’ve always found it interesting how these places use fairly low-fi materials to deliver a high-end experience – worn wood, stickers, hand-written signs – and still feel considered.
 
 I wasn’t trying to recreate a real crate exactly, but I did borrow a few ideas:
 
@@ -26,14 +31,14 @@ The biggest challenge was making a flat web interface feel physical without turn
 
 A surprising amount of time went into things that look simple on the surface:
 
-- Getting records to feel like they sit in the crate rather than floating above it  
-- Layering the crate front and back so the depth made sense  
-- Making sure the selected album stayed visually prominent when everything else dimmed  
+- Making records feel like they actually sit in the crate 
+- Layering the crate so the depth reads correctly
+- Keeping the selected album visually dominant when everything else dims  
 - Tuning animation timing so movements felt weighted, not snappy or “toy-like”  
 
 Small changes made a big difference. A few pixels too far, a transition that was slightly too fast, or the wrong easing curve and the illusion completely fell apart.
 
-A lot of the work was subtractive – removing effects that felt clever but distracted from the interaction.
+A lot of the work ended up being subtractive: removing clever touches that didn’t actually help the interaction.
 
 ---
 
@@ -49,19 +54,22 @@ Under the hood, the project is deliberately simple:
 
 This project was deliberately constrained to what I could build myself - HTML, CSS, and JavaScript, with AI used to bridge gaps rather than replace the thinking. The goal was to turn an idea into something real, and learn through the process rather than chase technical purity.
 
+# Constraints
+This version is designed for a 1920 × 1080 desktop view, where the perspective and depth work best. Mobile and responsive layouts are still on the “future iteration” list.
+
 ---
 
 ## 5. What I Learned
 
 A few things really stood out:
 
-- Tiny interaction tweaks massively change how something is perceived  
+- Tiny interaction tweaks completely change how something feels
 - Visual feedback matters – hover states, playback indicators, selection cues  
-- Small hitboxes are not your friend, no matter how “correct” they seem in theory  
+- Small hitboxes are a bad idea, even if they seem “correct” on paper 
 - Designing without constraints makes it easy to overreach and never ship  
-- An MVP is better than a perfect idea that never leaves your head  
-
-This project took longer than expected because the final 10% – where things stop feeling mechanical – is where most of the work actually lives.
+- An MVP is better than a perfect idea that never leaves your head
+- The last 10% - the part where things stop feeling mechanical - is where most of the work actually happens
+- Interaction design doesn’t just affect usability; it shapes behaviour and attention
 
 ---
 
@@ -74,7 +82,9 @@ There’s room to:
 - Add more albums and stories  
 - Make it usable beyond a laptop screen  
 - Expand the written context around each record  
-- Explore whether this could grow into a wider interactive music project  
+- Explore whether this could grow into a wider interactive music project
+- Test how different interaction patterns change browsing behaviour
 
 For now, I’m happy to leave it as a small, self-contained piece – a focused experiment in interaction, storytelling and restraint.
 
+[^1]: Skeuomorphism: a design style where digital items are made to resemble real-world counterparts.
