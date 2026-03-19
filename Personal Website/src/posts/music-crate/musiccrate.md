@@ -54,7 +54,7 @@ Under the hood, the project is deliberately simple:
 
 This project was deliberately constrained to what I could build myself - HTML, CSS, and JavaScript, with AI used to bridge gaps rather than replace the thinking. The goal was to turn an idea into something real, and learn through the process rather than chase technical purity.
 
-# Constraints
+## Constraints
 This version is designed for a 1920 × 1080 desktop view, where the perspective and depth work best. Mobile and responsive layouts are still on the “future iteration” list.
 
 ---
@@ -85,6 +85,6 @@ There’s room to:
 - Explore whether this could grow into a wider interactive music project
 - Test how different interaction patterns change browsing behaviour
 
-For now, I’m happy to leave it as a small, self-contained piece – a focused experiment in interaction, storytelling and restraint.
+For now, I’m happy to leave it as a small, self-contained piece – a focused experiment in interaction, design and restraint.
 
 [^1]: Skeuomorphism: a design style where digital items are made to resemble real-world counterparts.

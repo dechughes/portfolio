@@ -120,7 +120,7 @@ Despite structural weaknesses:
 - healthy customer‑level contribution  
 - scalable acquisition economics  
 
-The platform’s challenge is **not financial margin** — margins are healthy.  
+The platform’s challenge is **not financial margin** - margins are healthy.  
 The challenge is **structural**:
 
 - demand is shallow due to low retention  

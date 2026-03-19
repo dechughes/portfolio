@@ -357,8 +357,8 @@ useEffect(() => {
     <p className="text-xs uppercase tracking-wide text-gray-400 mb-6">
       Active work
     </p>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
+{/* This changes the column layout of the projects */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl">
 
 <button
   onClick={() => setSelectedProject('fintech-dashboard')}
@@ -477,9 +477,6 @@ useEffect(() => {
     Note: This version is designed for a 1920 × 1080 desktop view, where the perspective and depth work best. Mobile and responsive layouts are still on the “future iteration” list.
   </p>
 
-  <p className="mt-3 text-xs text-gray-500">
-    Ongoing documentation of the Music Crate project.
-  </p>
 </div>
 
     {/* Posts */}
@@ -534,7 +531,7 @@ useEffect(() => {
       Brazil E‑Commerce Marketplace Analysis: SQL‑Driven Commercial & Unit Economics Modelling
     </h1>
 
-<p className="text-lg text-gray-600 max-w-2xl mb-14">
+<p className="text-lg text-gray-600 max-w-2xl mb-4">
   An end-to-end SQL project analysing an e-commerce marketplace dataset - covering database design, data cleaning, and business insights across revenue, customers, sellers, and unit economics.
 </p>
 
@@ -557,6 +554,26 @@ useEffect(() => {
   <p className="mt-3 text-xs text-gray-500">
     Charts and outputs from the SQL analysis.
   </p>
+    <h2 className="text-2xl sm:text-3xl font-medium mb-4">
+      Executive Summary
+    </h2>
+
+<ul className="text-lg text-gray-600 max-w-2xl mb-4">
+  <li className="mb-3">Developed a full commercial and unit economics model using a 100k+ order marketplace dataset </li>
+  <li className="mb-3">Found a core weakness in the business: customer retention sits at just 3.12%</li>
+  <li className="mb-3">Revealed extreme seller concentration, with 10% of sellers generating 85% of revenue </li>
+  <li className="mb-3">Demonstrated that strong margins hide a structurally fragile marketplace </li>
+  <li className="mb-3">Proposed targeted retention and seller diversification strategies to improve LTV and long‑term stability </li>
+</ul>
+
+    <h2 className="text-2xl sm:text-3xl font-medium mb-4">
+      Tools Used
+    </h2>
+
+<p className="text-lg text-gray-600 max-w-2xl mb-4">
+  MySQL, relational database design, analytical SQL (window functions, joins, aggregations), unit economics modelling, data cleaning and validation, business insight generation.
+</p>
+
 </div>
 
     <div className="space-y-8 max-w-2xl">

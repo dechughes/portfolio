@@ -2,17 +2,17 @@
 
 ## **Project Overview**
 
-After completing *The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert* on Udemy, I wanted to apply what I’d learned in a way that felt genuinely commercial - not just technical. My goal was to build a portfolio project that tested my SQL skills, my analytical thinking, and my ability to extract meaningful insights from real‑world data.
+After completing *The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert* on Udemy, I wanted to apply what I’d learned in a way that felt genuinely commercial - not just technical. My goal was to build a project that tested my SQL skills, my analytical thinking, and my ability to extract meaningful insights from real‑world data.
 
-The **Olist Brazilian E‑Commerce dataset** is well‑suited for this. It mirrors the complexity of an actual marketplace business: multiple sellers, thousands of customers, diverse product categories, logistics constraints, and real customer behaviour. Rather than treating it as a simple data‑cleaning or dashboard exercise, I reframed the project as a **commercial performance and unit economics analysis**.
+The **Olist Brazilian E‑Commerce dataset** is ideal for this. It mirrors the complexity of an actual marketplace business: multiple sellers, thousands of customers, diverse product categories, logistics constraints, and real customer behaviour. Rather than treating it as a simple data‑cleaning or dashboard exercise, I reframed the project as a commercial performance and unit economics analysis.
 
-This project is designed to show that I can move from raw data to meaningful business insight - not just write queries.
+This project shows how I move from raw data to commercially actionable insight, not just query output.
 
 ---
 
 ## **The Business Framing**
 
-Olist is a Brazilian marketplace that connects sellers to customers across multiple sales channels. The dataset covers approximately **100,000 orders** placed between 2016 and 2018, giving a clear window into the commercial lifecycle of a growing marketplace business.
+Olist is a Brazilian marketplace that connects sellers to customers across multiple sales channels. The dataset covers approximately 100,000 orders placed between 2016 and 2018, offering a clear view of the commercial lifecycle of a growing marketplace.
 
 I approached this the way an analyst embedded in the business would: starting with the data structure, validating its integrity, then building up to commercial interpretation. The questions I set out to answer are ones that would appear on a real business review agenda.
 

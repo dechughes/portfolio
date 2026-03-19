@@ -1,20 +1,20 @@
 ## **Dataset Overview**
 
-The dataset used for this project is the **Brazilian E‑Commerce Public Dataset by Olist**, made publicly available via Kaggle. It contains approximately **100,000 orders** placed between 2016 and 2018 across multiple Brazilian marketplaces. The data covers:
+The dataset used for this project is the Brazilian E‑Commerce Public Dataset by Olist, publicly available via Kaggle. It contains approximately 100,000 orders placed between 2016 and 2018 across multiple Brazilian marketplaces. The data includes:
 - order status  
 - payments  
 - product sales  
 - customer records  
 - logistics performance  
 
-The database environment for this project was created locally in MySQL under the schema:
+All data was imported into a local MySQL environment under the schema:
 `brazil_ecommerce_analysis`
 
 ---
 
 ## **Tables Selected and Why**
 
-Although the full dataset contains multiple relational tables, this analysis focuses on **four core transactional tables**:
+Although the full dataset contains multiple relational tables, this analysis focuses on four core transactional tables:
 
 | **Table**                     | **Purpose**                                           |
 |--------------------------------|--------------------------------------------------------|
@@ -23,13 +23,13 @@ Although the full dataset contains multiple relational tables, this analysis foc
 | `olist_customers_dataset`      |   Customer identity and geographic data                 |
 | `olist_order_payments_dataset` |  Payment type, value, and instalment structure      |
 
-These four tables provide sufficient coverage to analyse revenue, order behaviour, customer activity, and payment structure. Additional tables (e.g., product categories, reviews) were excluded to keep the analysis focused on **commercial and financial performance**.
+These four tables provide full coverage for analysing revenue, order behaviour, customer activity, and payment structure. Additional tables (e.g., product categories, reviews) were intentionally excluded to keep the scope focused on commercial and financial performance.
 
 ---
 
 ## **Structural Validation Approach**
 
-Before importing the data into MySQL, each CSV file was reviewed in spreadsheet software. This step focused purely on **structural validation** - no manual editing was performed. All formal cleaning was deferred to SQL to ensure full reproducibility.
+Before importing the data into MySQL, each CSV file was reviewed in Excel. This step focused purely on data validation (looking at the structure of the data) - no manual edits were made. All data cleaning was left to SQL to ensure full reproducibility.
 
 Validation checks included:
 
@@ -49,9 +49,9 @@ Validation checks included:
 The dataset reflects a clear transactional lifecycle: purchase → approval → carrier dispatch → customer delivery. Most records follow a logical timestamp sequence. A small number of anomalies were identified:
 
 - 14 records marked *delivered* with a null approval timestamp  
-- 6 cancelled orders with a populated customer delivery date  
+- 6 *cancelled* orders with a populated customer delivery date  
 - 7 orders delivered to carrier but not to customer  
-- 1 order marked delivered with no carrier or customer timestamp  
+- 1 order marked *delivered* with no carrier or customer timestamp  
 
 These represent **<0.05%** of all records.
 
@@ -83,6 +83,6 @@ These represent **<0.05%** of all records.
 
 ## **Initial Assessment**
 
-Structural integrity across all four tables was strong. Null presence was limited, and anomalies were minimal relative to dataset size. No critical structural failures were found. All flagged inconsistencies were carried forward for formal validation and quantification within SQL.
+Structural integrity across all four tables was strong. Nulls were limited, anomalies were minimal relative to dataset size and no critical structural failures were found. All flagged inconsistencies were carried forward for formal validation and quantification within SQL.
 
 Overall, the dataset demonstrated **high structural integrity**, with only minor anomalies requiring deeper investigation during SQL‑based cleaning and analysis.

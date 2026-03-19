@@ -1,7 +1,7 @@
 
 ## **Treatment Philosophy**
 
-The approach to data cleaning was deliberate. Rather than removing records that did not fit neatly, the priority was to preserve the dataset's integrity and handle anomalies at the metric level where necessary. This means:
+The approach to data cleaning was intentional. Rather than removing records that did not fit neatly, the priority was to preserve the dataset's integrity and handle anomalies at the metric level where necessary. This means:
 
 - No records were deleted unless they were confirmed structural duplicates  
 - Anomalous records were retained for transparency  
@@ -67,6 +67,6 @@ These records were retained and selectively excluded from delivery duration calc
 
 ## **Final Dataset Assessment**
 
-Across all four core tables, structural integrity was confirmed. Identified anomalies were minimal relative to dataset size and did not affect transactional validity. Where inconsistencies existed, they were documented and managed through **metric‑specific filtering** rather than record deletion.
+Across all four tables, structural integrity was strong. Anomalies were minimal relative to dataset size and did not compromise transactional validity. Where inconsistencies existed, they were documented and handled through metric‑specific filtering rather than deletion.
 
-The dataset was deemed **analytically reliable** for commercial modelling.
+The dataset was considered analytically reliable for commercial modelling.

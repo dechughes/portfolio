@@ -134,5 +134,7 @@ Validating the data in a spreadsheet before touching SQL gave me:
 It made the cleaning stage faster, more deliberate, and more reliable.
 
 ---
+This project reflects how I approach analytics: starting with business questions, validating the data, and focusing on decisions rather than outputs.
 
+---
 This project was completed using **MySQL**, with data sourced from the **Brazilian E‑Commerce Public Dataset by Olist**, available via Kaggle.
