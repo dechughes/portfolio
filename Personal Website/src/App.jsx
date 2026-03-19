@@ -531,56 +531,75 @@ useEffect(() => {
       Brazil E‑Commerce Marketplace Analysis: SQL‑Driven Commercial & Unit Economics Modelling
     </h1>
 
-<p className="text-lg text-gray-600 max-w-2xl mb-4">
-  An end-to-end SQL project analysing an e-commerce marketplace dataset - covering database design, data cleaning, and business insights across revenue, customers, sellers, and unit economics.
-</p>
+    <p className="text-lg text-gray-600 max-w-2xl mb-8">
+      An end-to-end SQL project analysing an e-commerce marketplace dataset - covering database design, data cleaning, and business insights across revenue, customers, sellers, and unit economics.
+    </p>
 
-{/* Image carousel */}
-<div className="mb-14 max-w-3xl">
-  <div className="relative aspect-[16/10] sm:aspect-[3/2] rounded-sm overflow-hidden">
-    <AnimatePresence mode="wait">
-      <motion.img
-        key={sqlImageIndex}
-        src={sqlImages[sqlImageIndex]}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1.5 }}
-        className="absolute inset-0 w-full h-full object-contain"
-        alt="SQL analysis chart"
-      />
-    </AnimatePresence>
-  </div>
-  <p className="mt-3 text-xs text-gray-500">
-    Charts and outputs from the SQL analysis.
-  </p>
-    <h2 className="text-2xl sm:text-3xl font-medium mb-4">
-      Executive Summary
-    </h2>
+    {/* Image carousel */}
+    <div className="mb-10 max-w-3xl">
+      <div className="relative aspect-[16/10] sm:aspect-[3/2] rounded-sm overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={sqlImageIndex}
+            src={sqlImages[sqlImageIndex]}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0 w-full h-full object-contain"
+            alt="SQL analysis chart"
+          />
+        </AnimatePresence>
+      </div>
+      <p className="mt-3 text-xs text-gray-500">
+        Charts and outputs from the SQL analysis.
+      </p>
+    </div>
 
-<ul className="text-lg text-gray-600 max-w-2xl mb-4">
-  <li className="mb-3">Developed a full commercial and unit economics model using a 100k+ order marketplace dataset </li>
-  <li className="mb-3">Found a core weakness in the business: customer retention sits at just 3.12%</li>
-  <li className="mb-3">Revealed extreme seller concentration, with 10% of sellers generating 85% of revenue </li>
-  <li className="mb-3">Demonstrated that strong margins hide a structurally fragile marketplace </li>
-  <li className="mb-3">Proposed targeted retention and seller diversification strategies to improve LTV and long‑term stability </li>
-</ul>
+    {/* Executive Summary */}
+    <div className="max-w-2xl mb-10">
+      <p className="text-xs uppercase tracking-wide text-gray-400 mb-4">
+        Executive Summary
+      </p>
+      <ul className="space-y-3">
+        <li className="text-base text-gray-600 flex items-start gap-2">
+          <span className="text-[#005b4c] mt-1">—</span>
+          <span>Developed a full commercial and unit economics model using a 100k+ order marketplace dataset</span>
+        </li>
+        <li className="text-base text-gray-600 flex items-start gap-2">
+          <span className="text-[#005b4c] mt-1">—</span>
+          <span>Found a core weakness in the business: customer retention sits at just 3.12%</span>
+        </li>
+        <li className="text-base text-gray-600 flex items-start gap-2">
+          <span className="text-[#005b4c] mt-1">—</span>
+          <span>Revealed extreme seller concentration, with 10% of sellers generating 85% of revenue</span>
+        </li>
+        <li className="text-base text-gray-600 flex items-start gap-2">
+          <span className="text-[#005b4c] mt-1">—</span>
+          <span>Demonstrated that strong margins hide a structurally fragile marketplace</span>
+        </li>
+        <li className="text-base text-gray-600 flex items-start gap-2">
+          <span className="text-[#005b4c] mt-1">—</span>
+          <span>Proposed targeted retention and seller diversification strategies to improve LTV and long‑term stability</span>
+        </li>
+      </ul>
+    </div>
 
-    <h2 className="text-2xl sm:text-3xl font-medium mb-4">
-      Tools Used
-    </h2>
+    {/* Tools Used */}
+    <div className="max-w-2xl mb-14">
+      <p className="text-xs uppercase tracking-wide text-gray-400 mb-4">
+        Tools Used
+      </p>
+      <p className="text-base text-gray-600 leading-relaxed">
+        MySQL, relational database design, analytical SQL (window functions, joins, aggregations), unit economics modelling, data cleaning and validation, business insight generation.
+      </p>
+    </div>
 
-<p className="text-lg text-gray-600 max-w-2xl mb-4">
-  MySQL, relational database design, analytical SQL (window functions, joins, aggregations), unit economics modelling, data cleaning and validation, business insight generation.
-</p>
-
-</div>
-
+    {/* Posts */}
     <div className="space-y-8 max-w-2xl">
       {ecommerceAnalysisPosts.map((post) => (
         <article key={post.id} className="border-b border-gray-100 pb-8">
           <p className="text-xs text-gray-400 mb-3">{post.date}</p>
-
           <button
             onClick={() => setSelectedPost(post.id)}
             className="text-left group w-full"
@@ -588,7 +607,6 @@ useEffect(() => {
             <h2 className="text-xl font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-3">
               {post.title}
             </h2>
-
             {post.snippet ? (
               <p className="text-gray-600 leading-relaxed">
                 {post.snippet}
