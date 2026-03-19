@@ -58,3 +58,5 @@ As there is no cost associated with rolling out either variant, even with zero c
 ## **Recommendation**
 
 Variant B performs marginally better in conversion and marginally worse in churn, but the differences are so small that they are commercially meaningless. There is no compelling reason to roll out either variant. Due to this, the recommendation is further testing with more substantial UX or product changes.
+
+This reflects a common real-world scenario where experiments fail to produce signal - highlighting the importance of testing meaningful product changes rather than incremental UI tweaks.

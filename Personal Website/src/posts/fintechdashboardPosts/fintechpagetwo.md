@@ -179,4 +179,4 @@ The table below summarises the values I use, why they make sense, and the realâ€
 
 
 
-
+The $15 ARPU in the model reflects total blended revenue from subscriptions and transaction fees. It aligns with the earlier $6.69 subscription ARPU estimate, with the remaining eight dollars coming from transactionâ€‘driven revenue.

@@ -14,7 +14,7 @@ To simulate a realistic fintech dataset that captures:
 - Monthly revenue
 - Retention and churn
 
-Rather than inventing probabilities, the model is anchored to Cleo’s published metrics, with implied probabilities derived from those numbers and supplemented by fintech industry benchmarks. Further, I will use this dataset to showcase my practical skills in data modelling and dashboard development. 
+The dataset is grounded in Cleo’s published metrics, with implied probabilities derived from those numbers and supported by broader fintech benchmarks. I then use this synthetic dataset to demonstrate practical skills in data modelling and dashboard development, ensuring the simulation reflects real‑world unit economics and publicly reported performance.
 
 ---
 
