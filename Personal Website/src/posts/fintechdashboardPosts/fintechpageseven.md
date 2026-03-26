@@ -16,7 +16,7 @@ This section evaluates whether Variant A or Variant B delivers better performanc
 
 ## **Experiment Analysis (A/B Testing) Dashboard**
 
-[Experiment Analysis dashboard image - to be uploaded]
+![Experiment Analysis](/assets/fintechpost/experimentanalysis.png)
 
 ---
 

@@ -14,8 +14,9 @@ This section seeks to understand which user cohorts retain best, whether churn s
 
 ## **Cohort Retention Dashboard**
 
-[Cohort Retention dashboard image]
+![Cohort Retention A](/assets/fintechpost/cohortretentionA.png)
 
+![Cohort Retention B](/assets/fintechpost/cohortretentionB.png)
 ---
 
 ## **Findings**

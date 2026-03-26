@@ -14,8 +14,9 @@ This section provides a high‑level view of the business’s health, focusing o
 
 ## **Executive Overview Dashboard**
 
-*(Dashboard visual to upload.)*
+![Executive Overview A](/assets/fintechpost/execoverviewA.png)
 
+![Executive Overview B](/assets/fintechpost/execoverviewB.png)
 ---
 
 ## **Findings**

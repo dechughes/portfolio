@@ -4,13 +4,9 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 
 import ReactMarkdown from 'react-markdown'
-// import { travelKitPosts } from './posts/travel-kit/travelKitPosts'
 import { musicCratePosts } from './posts/music-crate/musicCratePosts'
 import { ecommerceAnalysisPosts } from './posts/ecommerceAnalysisPosts/sqlprojectposts'
 import { fintechdashboardPosts } from './posts/fintechdashboardPosts/fintechprojectposts'
-
-
-
 
 import everestImage from './assets/everest.jpg'
 import komodoImage from './assets/komodo.jpg'
@@ -26,6 +22,9 @@ import crateDetail3 from './assets/music-crate/music-crate-3.jpg'
 
 // SQL Hero Image
 import sqlHero from './assets/sqlpost1/sql1heroimage.png'
+
+//Fintech Hero Image
+import fintechHero from './assets/fintechpost/fintechheroimage.png'
 
 const musicCrateImages = [
   crateHero,
@@ -48,7 +47,12 @@ const sqlImages = [
 
 // Fintech Dashboard Images
 const fintechImages = [
-  'assets/fintechpost/fintechhero.png',
+  '/assets/fintechpost/execoverviewA.png',
+  '/assets/fintechpost/execoverviewB.png',
+  '/assets/fintechpost/cohortretentionA.png',
+  '/assets/fintechpost/cohortretentionB.png',
+  '/assets/fintechpost/experimentanalysis.png',
+  '/assets/fintechpost/funnelanalysis.png',
 ]
 
 // This is the expandable component used in the About section
@@ -364,8 +368,10 @@ useEffect(() => {
   onClick={() => setSelectedProject('fintech-dashboard')}
   className="group text-left border border-gray-200 hover:border-[#005b4c] transition-all p-6 rounded-sm"
 >
-  <div className="aspect-[4/3] bg-gray-100 mb-4 rounded-sm overflow-hidden flex items-center justify-center">
-    <span className="text-gray-400 text-sm">Fintech</span> {/* Placeholder text for the image */}
+  <div className="aspect-[4/3] bg-gray-100 mb-4 rounded-sm overflow-hidden">
+    <div className="w-full h-full flex items-center justify-center text-gray-400">
+      <img src={fintechHero} alt="Fintech Platform Dashboard" className="w-full h-full object-cover" />
+    </div>
   </div>
   <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-2">
     Fintech Platform Dashboard
@@ -377,7 +383,6 @@ useEffect(() => {
     2026 · Complete
   </p>
 </button>
-
 
 
     <button

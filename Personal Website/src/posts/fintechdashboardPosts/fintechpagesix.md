@@ -16,7 +16,7 @@ This section evaluates the user funnel from acquisition through activation and c
 
 ## **Funnel Dashboard**
 
-[IMAGE OF FUNNEL DASHBOARD - to be uploaded]
+![Funnel Analysis](/assets/fintechpost/funnelanalysis.png)
 
 ---
 
