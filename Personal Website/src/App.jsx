@@ -7,6 +7,9 @@ import ReactMarkdown from 'react-markdown'
 import { musicCratePosts } from './posts/music-crate/musicCratePosts'
 import { ecommerceAnalysisPosts } from './posts/ecommerceAnalysisPosts/sqlprojectposts'
 import { fintechdashboardPosts } from './posts/fintechdashboardPosts/fintechprojectposts'
+import { deliverootdPosts } from './posts/deliverooteardown/deliverootd'
+
+
 
 import everestImage from './assets/everest.jpg'
 import komodoImage from './assets/komodo.jpg'
@@ -25,6 +28,9 @@ import sqlHero from './assets/sqlpost1/sql1heroimage.png'
 
 //Fintech Hero Image
 import fintechHero from './assets/fintechpost/fintechheroimage.png'
+
+//Deliveroo Hero Image
+import deliverooHero from './assets/deliveroopost/deliveroohero.png'
 
 const musicCrateImages = [
   crateHero,
@@ -54,6 +60,15 @@ const fintechImages = [
   '/assets/fintechpost/experimentanalysis.png',
   '/assets/fintechpost/funnelanalysis.png',
 ]
+
+// Deliveroo Teardown Images
+const deliverooImages = [
+  '/assets/deliverootd/entrypoint.png',
+  '/assets/deliverootd/menu.png',
+  '/assets/deliverootd/frontpage.png',
+]
+
+
 
 // This is the expandable component used in the About section
 function ExpandableItem({ title, meta, children, year, tags, defaultOpen = false }) {
@@ -122,7 +137,8 @@ export default function App() {
   const [selectedPost, setSelectedPost] = useState(null)
   const [musicCrateImageIndex, setMusicCrateImageIndex] = useState(0)
   const [fintechImageIndex, setFintechImageIndex] = useState(0)
-const [sqlImageIndex, setSqlImageIndex] = useState(0)
+  const [sqlImageIndex, setSqlImageIndex] = useState(0)
+  const [deliverootImageIndex, setDeliverootImageIndex] = useState(0)
   
 
 // This is the date and time at the top right of the screen
@@ -185,6 +201,18 @@ useEffect(() => {
   return () => clearInterval(interval)
 }, [selectedProject])
 
+
+useEffect(() => {
+  if (selectedProject !== 'deliveroo-teardown') return
+
+  setDeliverootImageIndex(0)
+
+  const interval = setInterval(() => {
+    setDeliverootImageIndex(i => (i + 1) % deliverooImages.length)
+  }, 5000)
+
+  return () => clearInterval(interval)
+}, [selectedProject])
 
   const navItem = (key, label) => (
     <button
@@ -365,6 +393,27 @@ useEffect(() => {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl">
 
 <button
+  onClick={() => setSelectedProject('deliveroo-teardown')}
+  className="group text-left border border-gray-200 hover:border-[#005b4c] transition-all p-6 rounded-sm"
+>
+  <div className="aspect-[4/3] bg-gray-100 mb-4 rounded-sm overflow-hidden">
+    <div className="w-full h-full flex items-center justify-center text-gray-400">
+      <img src={deliverooHero} alt="Deliveroo Teardown" className="w-full h-full object-cover" />
+    </div>
+  </div>
+  <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-2">
+    Deliveroo Teardown
+  </h3>
+  <p className="text-sm text-gray-600">
+    Analysing basket building and upsell mechanics
+  </p>
+  <p className="text-xs text-gray-400 mt-3">
+    2026 · Complete
+  </p>
+</button>
+
+
+<button
   onClick={() => setSelectedProject('fintech-dashboard')}
   className="group text-left border border-gray-200 hover:border-[#005b4c] transition-all p-6 rounded-sm"
 >
@@ -515,6 +564,81 @@ useEffect(() => {
 
   </motion.section>
 )}
+
+{/* Deliveroo Teardown Project Overview */}
+{view === 'projects' && selectedProject === 'deliveroo-teardown' && !selectedPost && (
+  <motion.section
+    key="deliveroo-teardown-overview"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
+    <button
+      onClick={() => setSelectedProject(null)}
+      className="text-sm text-gray-500 hover:text-[#005b4c] transition mb-8 flex items-center gap-2"
+    >
+      <span>←</span>
+      <span>Back to projects</span>
+    </button>
+
+    <h1 className="text-3xl sm:text-4xl font-medium mb-4">
+      Deliveroo Teardown: Basket Building and Upsell Mechanics
+    </h1>
+
+    <p className="text-lg text-gray-600 max-w-2xl mb-14">
+      Analysing how Deliveroo increases average order value through add-ons, bundles, nudges, and price psychology.
+    </p>
+
+{/* Image carousel */}
+<div className="mb-14 max-w-3xl">
+  <div className="relative aspect-[16/10] sm:aspect-[3/2] rounded-sm overflow-hidden">
+    <AnimatePresence mode="wait">
+      <motion.img
+        key={deliverootImageIndex}
+        src={deliverooImages[deliverootImageIndex]}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
+        className="absolute inset-0 w-full h-full object-contain"
+        alt="Deliveroo teardown screenshot"
+      />
+    </AnimatePresence>
+  </div>
+  <p className="mt-3 text-xs text-gray-500">
+    Screenshots from the Deliveroo teardown.
+  </p>
+</div>
+
+
+    <div className="space-y-8 max-w-2xl">
+      {deliverootdPosts.map((post) => (
+        <article key={post.id} className="border-b border-gray-100 pb-8">
+          <p className="text-xs text-gray-400 mb-3">{post.date}</p>
+          <button
+            onClick={() => setSelectedPost(post.id)}
+            className="text-left group w-full"
+          >
+            <h2 className="text-xl font-medium text-gray-900 group-hover:text-[#005b4c] transition-colors mb-3">
+              {post.title}
+            </h2>
+            {post.snippet ? (
+              <p className="text-gray-600 leading-relaxed">
+                {post.snippet}
+                <span className="text-[#005b4c] ml-2 group-hover:ml-3 transition-all">
+                  Read more →
+                </span>
+              </p>
+            ) : (
+              <p className="text-gray-500 italic">Notes in progress…</p>
+            )}
+          </button>
+        </article>
+      ))}
+    </div>
+  </motion.section>
+)}
+
 
 {/* SQL Analysis Project Overview */}
 {view === 'projects' && selectedProject === 'sql-analysis' && !selectedPost && (
@@ -933,6 +1057,102 @@ useEffect(() => {
               className="hover:text-[#005b4c] transition"
             >
               Fintech Platform Dashboard
+            </button>
+            <span>→</span>
+            <span className="text-gray-900">{post.title}</span>
+          </div>
+
+          <p className="text-xs text-gray-400 mb-3">{post.date}</p>
+          <h1 className="text-3xl sm:text-4xl font-medium mb-12">
+            {post.title}
+          </h1>
+
+          <div className="max-w-2xl">
+            <div className="text-gray-700 space-y-6 leading-relaxed text-base markdown-content">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                  img: ({ node, ...props }) => (
+                    <img {...props} className="w-full rounded-sm my-6" />
+                  )
+                }}
+              >
+                {post.markdown}
+              </ReactMarkdown>
+            </div>
+          </div>
+
+          <div className="mt-16 pt-8 border-t border-gray-200 flex justify-between items-center max-w-2xl">
+            {prevPost ? (
+              <button
+                onClick={() => setSelectedPost(prevPost.id)}
+                className="text-sm text-gray-600 hover:text-[#005b4c] transition flex items-center gap-2"
+              >
+                <span>←</span>
+                <div className="text-left">
+                  <div className="text-xs text-gray-400">Previous</div>
+                  <div>{prevPost.title}</div>
+                </div>
+              </button>
+            ) : (
+              <div />
+            )}
+            {nextPost && (
+              <button
+                onClick={() => setSelectedPost(nextPost.id)}
+                className="text-sm text-gray-600 hover:text-[#005b4c] transition flex items-center gap-2"
+              >
+                <div className="text-right">
+                  <div className="text-xs text-gray-400">Next</div>
+                  <div>{nextPost.title}</div>
+                </div>
+                <span>→</span>
+              </button>
+            )}
+          </div>
+
+          <button
+            onClick={() => setSelectedPost(null)}
+            className="mt-8 text-sm text-gray-500 hover:text-[#005b4c] transition"
+          >
+            ← Back to all posts
+          </button>
+        </>
+      )
+    })()}
+  </motion.section>
+)}
+
+{/* Individual Deliveroo Teardown Post */}
+{view === 'projects' && selectedProject === 'deliveroo-teardown' && selectedPost && (
+  <motion.section
+    key="deliveroo-teardown-post"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+  >
+    {(() => {
+      const post = deliverootdPosts.find(p => p.id === selectedPost)
+      const postIndex = deliverootdPosts.findIndex(p => p.id === selectedPost)
+      const prevPost = postIndex > 0 ? deliverootdPosts[postIndex - 1] : null
+      const nextPost = postIndex < deliverootdPosts.length - 1 ? deliverootdPosts[postIndex + 1] : null
+
+      return (
+        <>
+          <div className="text-sm text-gray-500 mb-8 flex items-center gap-2">
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="hover:text-[#005b4c] transition"
+            >
+              Projects
+            </button>
+            <span>→</span>
+            <button
+              onClick={() => setSelectedPost(null)}
+              className="hover:text-[#005b4c] transition"
+            >
+              Deliveroo Teardown
             </button>
             <span>→</span>
             <span className="text-gray-900">{post.title}</span>
