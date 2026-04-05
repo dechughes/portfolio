@@ -1,18 +1,11 @@
-# Deliveroo Teardown: Basket building and Upsell Mechanics
-
-## Summary
-
-**Focus:** Basket building and AOV optimisation  
-**Product area:** Growth/monetisation  
-**Key insight:** Deliveroo increases AOV through low-friction, incremental upsells rather than high-value jumps  
-**Outcome:** A tightly controlled journey that balances revenue expansion with conversion efficiency
-
-
 ## Goal
 Analyse how Deliveroo increases average order value (AOV) through add-ons, bundles, nudges, and price psychology. 
 
 ## Why I’ve choosen this
 This is an interesting mix of pricing psychology and behavioural nudges, central to increasing revenue while keeping users engaged and coming back.
+
+**Link to full Notion page:**
+ https://www.notion.so/Deliveroo-Teardown-Full-Breakdown-Basket-Building-and-Upsell-Mechanics-337eb227d87380869400c402ce244537?source=copy_link
 
 ---
 
@@ -61,6 +54,7 @@ However, this apparent overload is not a UX flaw but a deliberate strategic choi
 This structure encourages exploration while still surfacing a handful of high-probability options early, reducing cognitive load just enough to keep momentum.
 
 ![Entry Point](/assets/deliverootd/entrypoint.png)
+
 ---
 
 ## Restaurant Pages
@@ -76,6 +70,8 @@ Once inside a restaurant page, the experience shifts noticeably. Competing resta
 - “Popular with other people” items  
 
 This shift reduces decision fatigue and narrows attention. Instead of continuing to evaluate options, the user is now encouraged to move quickly from the menu to the basket.
+
+![Restaurant](/assets/deliverootd/restaurantpage.png)
 
 ---
 
@@ -96,6 +92,7 @@ Across all of these, Deliveroo is not trying to push large, high-value upgrades.
 One limitation of this approach is that many of these upsells are generic rather than personalised. While effective at increasing AOV, they may not always increase perceived value for the user. Over time, this could create a gap between what users spend and what they feel they’re getting, which has implications for long-term retention. However, some of this is is expected for new-users. The account was created for this tear down and therefore not enough data has been generated to allow Deliveroo to make personalised suggestions. 
 
 ![Fancy Anything Else?](/assets/deliverootd/fancyanythingelse.png)
+
 ---
 
 ## Basket Stage
@@ -123,6 +120,14 @@ The interface is stripped back to the essentials: delivery details, address, pay
 
 This reflects a clear transition from revenue optimisation to conversion optimisation. The goal is no longer to increase order size, but to ensure the user completes the purchase with as little friction as possible.
 
+![Payment](/assets/deliverootd/payment.png)
+
+---
+
+![User Journey](/assets/deliverootd/userjourneycropped.png)
+
+A visual overview of the customer path from entry to checkout, highlighting how each stage transitions smoothly to maintain momentum and optimise conversion.
+
 ---
 
 ## Journey Level Insight
@@ -132,6 +137,10 @@ Across the journey, Deliveroo balances two competing goals: increasing AOV and m
 Upsells are introduced early through bundles, add-ons, and social proof, then reinforced in the basket through savings and low-friction prompts. At checkout, these mechanisms are removed entirely to prioritise speed and simplicity.
 
 The result is a system where users are gradually nudged towards higher basket sizes without ever feeling blocked or slowed down at the point of purchase.
+
+![Upsell Mechanics](/assets/deliverootd/upsellmechanics.png)
+
+*Upsell Mechanics*
 
 ---
 
@@ -197,6 +206,8 @@ Once a user completes that first order, the experience of ordering quickly, rela
 
 Deliveroo uses promotions to “buy” the first few repetitions of the habit. Over time, as more behavioural data is collected, these promotions can become more targeted, further reducing friction and increasing both AOV and lifetime value.
 
+![Growth Loop](/assets/deliverootd/growthloop1.png)
+
 ---
 
 ### Deliveroo Plus → Reduced Marginal Cost → Increased Frequency
@@ -218,6 +229,7 @@ As more users join the platform, more restaurants want to list on it. As more re
 This loop snowballs over time and is difficult for competitors to break once it reaches scale. This network effect further compounds Deliveroo’s upsell mechanics: more restaurants mean more bundles, more add-ons, and more opportunities to increase AOV. 
 
 ![Marketplace Loop](/assets/deliverootd/marketplaceloop.png)
+
 ---
 
 ## Evaluate the UX/UI and Overall Design
@@ -264,6 +276,10 @@ Deliveroo’s personalisation improves significantly over time, but the early ex
 - Higher first-session conversion  
 - Improved satisfaction for new users  
 
+![Lightweight personalisation](/assets/deliverootd/lightweightpersonalisation.png)
+
+*Personalisation mock-up: A 10-second onboarding to capture intent constraints (diet, budget, speed) to reduce choice overload on first session.*
+
 ---
 
 ### 3. Contextual Modes to Reduce Choice Overload
@@ -275,6 +291,10 @@ Deliveroo’s abundance is a strength, but it can be overwhelming in moments whe
 - Reduced abandonment during the browsing phase  
 - Higher satisfaction scores for “quick decision” journeys  
 
+![Contextual mode](/assets/deliverootd/contextualmode.png)
+
 ---
+
+## Summary
 
 Deliveroo’s strength is its frictionless journey to monetisation. It increases basket size efficiently and without disruption. By expanding the value of Deliveroo Plus, introducing lightweight personalisation earlier, and offering contextual modes for faster decision-making, Deliveroo could deepen retention, improve first-order conversion, and unlock additional revenue without compromising the flow that makes the product so effective.

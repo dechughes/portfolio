@@ -66,6 +66,11 @@ const deliverooImages = [
   '/assets/deliverootd/entrypoint.png',
   '/assets/deliverootd/menu.png',
   '/assets/deliverootd/frontpage.png',
+  '/assets/deliverootd/restaurantpage.png',
+  '/assets/deliverootd/fancyanythingelse.png',
+  '/assets/deliverootd/contextualmode.png',
+  '/assets/deliverootd/lightweightpersonalisation.png',
+  '/assets/deliverootd/growthloop1.png',
 ]
 
 
@@ -585,7 +590,7 @@ useEffect(() => {
       Deliveroo Teardown: Basket Building and Upsell Mechanics
     </h1>
 
-    <p className="text-lg text-gray-600 max-w-2xl mb-14">
+    <p className="text-lg text-gray-600 max-w-2xl mb-4">
       Analysing how Deliveroo increases average order value through add-ons, bundles, nudges, and price psychology.
     </p>
 
@@ -605,7 +610,7 @@ useEffect(() => {
       />
     </AnimatePresence>
   </div>
-  <p className="mt-3 text-xs text-gray-500">
+  <p className="mt-1 text-xs text-gray-500">
     Screenshots from the Deliveroo teardown.
   </p>
 </div>
