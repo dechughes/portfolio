@@ -242,10 +242,10 @@ export const projectRegistry = [
     mobileImage: '/assets/music-crate/music-crate-main.jpg',
     layout: 'compact',
     galleryImages: [
-      'public/assets/music-crate-public/music-crate-main.jpg',
-      'public/assets/music-crate-public/music-crate-3.jpg',
-      'public/assets/music-crate-public/music-crate-2.jpg',
-      'public/assets/music-crate-public/music-crate-1.jpg',
+      '/assets/music-crate-public/music-crate-main.jpg',
+      '/assets/music-crate-public/music-crate-3.jpg',
+      '/assets/music-crate-public/music-crate-2.jpg',
+      '/assets/music-crate-public/music-crate-1.jpg',
     ],
     overviewSections: [
       {
