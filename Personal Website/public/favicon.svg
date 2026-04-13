@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DH favicon">
+  <rect width="64" height="64" fill="#FAF7F2" />
+  <text
+    x="32"
+    y="39"
+    text-anchor="middle"
+    font-family="'Cormorant Garamond', serif"
+    font-size="30"
+    font-weight="600"
+    letter-spacing="-0.5"
+    fill="#2B2F32"
+  >
+    DH
+  </text>
+</svg>
