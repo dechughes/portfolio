@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colours */
+  --color-background: #F4F1EC;
+  --color-primary: #1A1A1A;
+  --color-secondary: #4A4A4A;
+  --color-accent: #C2B8A3;
+
+  /* Fonts */
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv11";
+  }
+}
+
+@layer components {
+  .vertical-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+}
+
+
+
+
+.grain-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.04;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Noise_Condition.png");
+}
+
+.sepia-wash {
+  filter: sepia(0.2) contrast(0.9) brightness(1.05);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
