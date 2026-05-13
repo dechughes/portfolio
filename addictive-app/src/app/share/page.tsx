@@ -1,9 +1,10 @@
 'use client';
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import AttentionPoster from "@/src/app/share/components/AttentionPoster";
 
-export default function Page() {
+function ShareContent() {
   const params = useSearchParams();
 
   const t = params.get("t");
@@ -16,5 +17,13 @@ export default function Page() {
       presses={p}
       attempts={a}
     />
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={null}>
+      <ShareContent />
+    </Suspense>
   );
 }
