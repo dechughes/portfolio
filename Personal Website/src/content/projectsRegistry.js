@@ -2,14 +2,74 @@ import crateHero from '../assets/music-crate/music-crate-main.jpg'
 import sqlHero from '../assets/sqlpost1/sql1heroimage.png'
 import fintechHero from '../assets/fintechpost/fintechheroimage.png'
 import deliverooHero from '../assets/deliveroopost/deliveroohero.png'
+import addictiveappHero from '../assets/addictiveapppost/addictiveapphero.png'
+
 
 import { musicCratePosts } from '../posts/music-crate/musicCratePosts'
 import { ecommerceAnalysisPosts } from '../posts/ecommerceAnalysisPosts/sqlprojectposts'
 import { fintechdashboardPosts } from '../posts/fintechdashboardPosts/fintechprojectposts'
 import { deliverootdPosts } from '../posts/deliverooteardown/deliverootd'
 import { portfolioRedesignPosts } from '../posts/portfolio-redesign/portfolioResdesignPosts'
+import { aaPosts } from '../posts/addictiveapp/addictive-app'
+
 
 export const projectRegistry = [
+  {
+  id: 'behavioural-loop',
+  refCode: 'PRJ-06',
+  title: 'Behavioural Design Experiment (V1)',
+  summary: 'A one‑minute behavioural loop that recreates the subtle techniques apps use to shape attention, built as a controlled experiment in friction, reward and timing.',
+  year: '2026',
+  role: 'Product + Design',
+  category: 'Interactive Build',
+  status: 'Complete',
+  heroImage: addictiveappHero,
+  mobileImage: '/assets/addictiveapp/aareveal.png',
+  layout: 'standard',
+  galleryImages: [
+    '/assets/addictiveapp/aaentry.png',
+    '/assets/addictiveapp/aaloading1.png',
+    '/assets/addictiveapp/aaloading2.png',
+    '/assets/addictiveapp/aaloading3.png',
+    '/assets/addictiveapp/aaloading4.png',
+    '/assets/addictiveapp/aareveal.png',
+    '/assets/addictiveapp/aashare.png',
+  ],
+  overviewSections: [
+    {
+      heading: 'Context',
+      kind: 'text',
+      copy: 'A personal project exploring how small interface choices influence behaviour, inspired by the mechanics used in apps like TikTok, Instagram and Candy Crush.',
+    },
+    {
+      heading: 'Problem',
+      kind: 'text',
+      copy: 'Modern interfaces use subtle behavioural patterns to keep users engaged, yet these mechanics are rarely visible or understood by the people experiencing them.',
+    },
+    {
+      heading: 'Insight',
+      kind: 'text',
+      copy: 'Tiny shifts in timing, friction and reward can meaningfully change how long someone stays in a loop, even when the interaction is simple and the stakes are low.',
+    },
+    {
+      heading: 'Strategy',
+      kind: 'text',
+      copy: 'Build a controlled, single‑page loop using artificial progress, adaptive delays, micro‑rewards and false endings to recreate the psychological patterns used in attention‑driven products.',
+    },
+    {
+      heading: 'Outcome',
+      kind: 'text',
+      copy: 'A working behavioural prototype with a reveal and share flow, demonstrating how engineered friction and reward shape user pacing, perception and persistence.',
+    },
+    {
+      heading: 'Reflection',
+      kind: 'text',
+      copy: 'Even the smallest behavioural cues - timing, copy, motion, friction — have a measurable impact on how people move through an experience. V1 proves the concept; V2 will focus on real user data.',
+    },
+  ],
+  posts: aaPosts,
+  externalLink: 'https://yourlinkhere.com/',
+  },
 
   {
   id: 'portfolio-redesign',
