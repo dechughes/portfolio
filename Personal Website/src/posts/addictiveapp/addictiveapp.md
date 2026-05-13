@@ -1,14 +1,14 @@
-## **Behavioural Design Experiment (V1)**
+![Entry Point](/assets/addictiveapp/aaentry.png)
 
 I keep seeing ads for Cursor and ChatGPT. It’s weird to see AI coding tools marketed like lifestyle products. Cursor pushes the entrepreneurial angle: “build anything.” ChatGPT pushes the “use it for everything” angle. You do start to wonder what the real business model is. Subscriptions help, but the real value is the data. These tools now have access to people’s daily thoughts, problems, insecurities and decisions. Phones gave companies our location and habits. AI chatbots go a layer deeper with our day‑to‑day questions, anxieties and opinions. The logical next step would be putting a chip in our brains (try not to think about Elon Musk owning Neuralink), it’s pretty intense.
 
-If you want to give it a try: **[LINK]**
+If you want to give it a try: **https://addictive-app.netlify.app/**
 
 ---
 
 ## **Why I Built This**
 
-This project sits somewhere before all of that, in how apps like TikTok, Instagram or Candy Crush (CC still has 170+ million monthly users — who is playing this?) have used techniques to keep people on their platforms. Before we gave all of our data away to the AI overlords, this is how companies learned about us.
+This project sits somewhere before all of that, in how apps like TikTok, Instagram or Candy Crush (CC still has 170+ million monthly users - who is playing this?) have used techniques to keep people on their platforms. Before we gave all of our data away to the AI overlords, this is how companies learned about us.
 
 I wanted to see if I could design and code a small experience that uses the basic behavioural techniques apps rely on to keep people engaged. I wanted to understand what these patterns look like when you build them from scratch, how they feel in practice and what the user experiences on the other side.
 
@@ -27,6 +27,7 @@ The share page exists for two reasons:
 
 Companies like King (Candy Crush) and TikTok have been doing this kind of behavioural shaping for years, but their data is locked away. I wanted to build something small that exposes the same mechanics in a transparent way.
 
+![Reveal](/assets/addictiveapp/aareveal.png)
 ---
 
 ## **Design Intent**
@@ -52,12 +53,14 @@ When I started, I wanted the experience to feel controlled, slightly ambiguous a
 
 The cycle copy was intentionally minimal and slightly unusual. It needed to feel intentional without being instructional. Soft authority in a sense.
 
+![Loading](/assets/addictiveapp/aaloading2.png)
 ---
 
 ## **Share Page**
 
 The share page was designed to feel calm, natural and more like those escapist Pinterest images you see. A contrast to the behavioural nudges. Something you could realistically post on social media. A reminder that screens pull us in when we should probably be out in nature (even if it’s raining during Summer as it is now).
 
+![Share](/assets/addictiveapp/aashare.png)
 ---
 
 ## **How I Built This**
@@ -78,4 +81,4 @@ Overall it’s scary how quickly companies have optimised for this type of behav
 
 What has the experiment taught me? That a lot of thinking goes into every second of your attention, and that each small pull draws you deeper into a haze of not quitting. Ten or fifteen seconds doesn’t sound like much, but over a lifetime this can account for hours of quiet influence and subtle manipulation. Just a thought.
 
-If you want to give it a try: **[LINK]**
+If you want to give it a try: **https://addictive-app.netlify.app/**

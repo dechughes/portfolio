@@ -440,7 +440,7 @@ export default function App() {
         {view === 'contact' && <div className="motif-layer" aria-hidden />}
         <div className="section-rule" aria-hidden />
         <p className="meta-line">
-          <span>V2 | Last updated April 2026 | Built with React + Markdown </span>
+          <span>V2 | Last updated May 2026 | Built with React + Markdown </span>
         </p>
       </footer>
     </div>
