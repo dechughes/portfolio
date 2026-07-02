@@ -12,7 +12,8 @@ import { fintechdashboardPosts } from '../posts/fintechdashboardPosts/fintechpro
 import { deliverootdPosts } from '../posts/deliverooteardown/deliverootd'
 import { portfolioRedesignPosts } from '../posts/portfolio-redesign/portfolioResdesignPosts'
 import { aaPosts } from '../posts/addictiveapp/addictive-app'
-import { emailTriagePosts } from '../posts/emailtriage/emailTriage'
+import { emailTriagePosts } from '../posts/emailTriageposts/emailTriage.js'
+
 
 
 export const projectRegistry = [
