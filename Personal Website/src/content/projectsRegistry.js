@@ -3,6 +3,7 @@ import sqlHero from '../assets/sqlpost1/sql1heroimage.png'
 import fintechHero from '../assets/fintechpost/fintechheroimage.png'
 import deliverooHero from '../assets/deliveroopost/deliveroohero.png'
 import addictiveappHero from '../assets/addictiveapppost/addictiveapphero.png'
+import emailTriageHero from '../assets/emailTriageimages/emailTriageHero.png'
 
 
 import { musicCratePosts } from '../posts/music-crate/musicCratePosts'
@@ -11,9 +12,64 @@ import { fintechdashboardPosts } from '../posts/fintechdashboardPosts/fintechpro
 import { deliverootdPosts } from '../posts/deliverooteardown/deliverootd'
 import { portfolioRedesignPosts } from '../posts/portfolio-redesign/portfolioResdesignPosts'
 import { aaPosts } from '../posts/addictiveapp/addictive-app'
+import { emailTriagePosts } from '../posts/emailtriage/emailTriage'
 
 
 export const projectRegistry = [
+  {
+  id: 'ai-email-triage',
+  refCode: 'PRJ-07',
+  title: 'AI‑Powered Email Triage for Cross‑Border Payments',
+  summary: 'A structured‑extraction system that turns messy operational emails into consistent JSON using prompt engineering, domain rules, and a Python automation pipeline.',
+  year: '2026',
+  role: 'AI + Operations',
+  category: 'Prompt Engineering + Automation',
+  status: 'Complete',
+  heroImage: emailTriageHero,
+  mobileImage: '/assets/emailTriageimages/emailTriageHero.png',
+  layout: 'feature',
+  galleryImages: [
+    '/assets/emailTriageimages/email01.png',
+    '/assets/emailTriageimages/folderstructure.png',
+          ],
+  overviewSections: [
+{
+  heading: 'Context',
+  kind: 'text',
+  copy: 'FrontierAid International is a fictional NGO built to mirror the kind of clients CAB works with - sending humanitarian payments across multiple emerging-market corridors including Uganda, Ghana, DRC and Kenya. Their inbound emails arrive from finance, compliance and operations contacts, varying in urgency, structure and clarity.',
+},
+{
+  heading: 'Problem',
+  kind: 'text',
+  copy: 'Reading and triaging operational emails is time-consuming before any real work has started. Analysts need to know who sent it, what they want, how urgent it is, what risks are present, and what information is missing. Doing this manually across a high-volume inbox is slow and error-prone.',
+},
+{
+  heading: 'Insight',
+  kind: 'text',
+  copy: 'A well-designed prompt can turn ambiguous, unstructured emails into consistent JSON that downstream workflows can actually use - but only when the instructions are precise, domain-aware, and grounded in how payments operations actually works. Writing the prompt is easy. Diagnosing where it breaks and fixing it precisely is the real work.',
+},
+{
+  heading: 'Strategy',
+  kind: 'text',
+  copy: 'Generate a dataset of 20 realistic emails using Claude, build a baseline extraction prompt (V1), manually evaluate outputs against an ideal across ten fields, group the failure modes, then iterate to a stronger V2 with ten targeted improvements. Automate the pipeline with Python so every email runs through the same prompt without manual pasting.',
+},
+{
+  heading: 'Outcome',
+  kind: 'text',
+  copy: 'V2 produced measurable improvements across all six failure categories. Email type classification went from generic labels to domain-specific categories. Urgency introduced hybrid values. Tone became multi-label. Relative dates were converted to ISO. Risk coverage became corridor-aware. Hallucinations dropped. The main remaining gap was multi-action extraction.',
+},
+{
+  heading: 'Reflection',
+  kind: 'text',
+  copy: 'Defining the ideal output and identifying where the model fails is harder than writing the prompt - and it has to be done by a human. The improvements in V2 came from understanding exactly where V1 struggled and addressing those points directly. The same discipline applies in any operational process: observe what breaks, understand why, fix it surgically.',
+},
+  ],
+  posts: emailTriagePosts,
+  externalLink: '', // Optional: link to GitHub or a hosted write-up
+},
+
+  
+  
   {
   id: 'behavioural-loop',
   refCode: 'PRJ-06',
