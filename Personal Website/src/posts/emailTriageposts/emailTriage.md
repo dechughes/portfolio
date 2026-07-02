@@ -92,17 +92,27 @@ The gaps grouped into six categories:
 
 The table below summarises accuracy across the five emails for key fields:
 
-| Field | Email 01 | Email 02 | Email 03 | Email 04 | Email 05 |
-|---|---|---|---|---|---|
-| client_name | ✅ | ✅ | ✅ | ✅ | ✅ |
-| sender_name | ⚠️ Role missing | ⚠️ Role missing | ⚠️ Role missing | ⚠️ Role missing | ⚠️ Role missing |
-| email_type | ❌ Too generic | ❌ Too generic | ❌ Too generic | ⚠️ Too generic | ❌ Misclassified |
-| urgency_level | ✅ | ✅ | ❌ Should be low-medium | ⚠️ Capitalisation | ✅ |
-| tone | ⚠️ Missing nuance | ⚠️ Missing nuance | ⚠️ Missing nuance | ⚠️ Missing nuance | ❌ Collapsed |
-| requested_action | ❌ Collapsed | ❌ Partial | ❌ Collapsed | ❌ Missed attachment review | ❌ Hallucinated |
-| dates_mentioned | ❌ Relative not converted | ⚠️ Date missing | ❌ Relative not converted | ✅ | ✅ |
-| risk_flags | ❌ Incomplete | ❌ One of three | ❌ Incomplete | ❌ Incomplete | ❌ Incomplete |
+| Field | Email 01 | Email 02 | Email 03 |
+|---|---|---|---|
+| client_name | ✅ | ✅ | ✅ |
+| sender_name | ⚠️ Role missing | ⚠️ Role missing | ⚠️ Role missing |
+| email_type | ❌ Too generic | ❌ Too generic | ❌ Too generic |
+| urgency_level | ✅ | ✅ | ❌ Should be low-medium |
+| tone | ⚠️ Missing nuance | ⚠️ Missing nuance | ⚠️ Missing nuance |
+| requested_action | ❌ Collapsed | ❌ Partial | ❌ Collapsed |
+| dates_mentioned | ❌ Relative not converted | ⚠️ Date missing | ❌ Relative not converted |
+| risk_flags | ❌ Incomplete | ❌ One of three | ❌ Incomplete |
 
+| Field | Email 04 | Email 05 |
+|---|---|---|
+| client_name | ✅ | ✅ |
+| sender_name | ⚠️ Role missing | ⚠️ Role missing |
+| email_type | ⚠️ Too generic | ❌ Misclassified |
+| urgency_level | ⚠️ Capitalisation | ✅ |
+| tone | ⚠️ Missing nuance | ❌ Collapsed |
+| requested_action | ❌ Missed attachment review | ❌ Hallucinated |
+| dates_mentioned | ✅ | ✅ |
+| risk_flags | ❌ Incomplete | ❌ Incomplete |
 ---
 
 ## From V1 to V2 - What Changed and Why
