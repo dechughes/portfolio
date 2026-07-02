@@ -27,7 +27,7 @@ export const projectRegistry = [
   category: 'Prompt Engineering + Automation',
   status: 'Complete',
   heroImage: emailTriageHero,
-  mobileImage: '/assets/emailTriageimages/emailTriageHero.png',
+  mobileImage: '/assets/emailTriageimages/email01.png',
   layout: 'feature',
   galleryImages: [
     '/assets/emailTriageimages/email01.png',
@@ -191,7 +191,7 @@ export const projectRegistry = [
     category: 'Teardown',
     status: 'Complete',
     heroImage: deliverooHero,
-    mobileImage: '/assets/deliveroopost/deliveroohero.png',
+    mobileImage: '/assets/deliverootd/savingsandoffers.png',
     layout: 'feature',
    galleryImages: [
   '/assets/deliverootd/frontpage.png',
@@ -244,7 +244,7 @@ export const projectRegistry = [
     category: 'Dashboard',
     status: 'Complete',
     heroImage: fintechHero,
-    mobileImage: '/assets/fintechpost/fintechheroimage.png',
+    mobileImage: '/assets/fintechpost/execoverviewA.png',
     layout: 'standard',
   galleryImages: [
     '/assets/fintechpost/execoverviewA.png',
@@ -299,7 +299,7 @@ export const projectRegistry = [
     category: 'SQL',
     status: 'Complete',
     heroImage: sqlHero,
-    mobileImage: '/assets/sqlpost1/sql1heroimage.png',
+    mobileImage: '/assets/sqlpost1/monthlyrevenueandordervolume.png',
     layout: 'standard',
     galleryImages: [
   '/assets/sqlpost1/breakevenanalysis.png',
